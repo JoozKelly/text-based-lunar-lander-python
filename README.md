@@ -1,66 +1,73 @@
-# Lunar Lander 🚀
+# Text-Based Lunar Lander in Python
 
-Welcome, astronaut! This project is a classic text-based **Lunar Lander game** written in Python. Your mission, should you choose to accept it, is to safely pilot the lunar module to the moon's surface. This game is a great example of a simple physics simulation and a classic command-line interface.
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-blue?logo=github)](https://github.com/JoozKelly/text-based-lunar-lander-python)
 
----
+## Description
 
-## Project Requirements
-This game is designed to run in a standard Python environment. All you need is a working installation of **Python 3**. No external libraries are necessary, making it easy to run on any system.
+This is a text-based implementation of the classic Lunar Lander game, written in Python. It's a basic recreation, reminiscent of the original BASIC programming language versions.  The goal is to safely land the lunar module on the moon's surface by carefully managing your fuel and descent speed.
 
----
+## Features and Functionality
 
-## Dependencies
-This project has **no external dependencies**. It's built entirely using Python's standard library, which means you don't need to install any additional packages with `pip`.
+*   **Simple Text-Based Interface:**  The game provides a command-line interface for interacting with the lunar module.
+*   **Fuel Management:** Players must strategically burn fuel to control their descent.  Burning 5 units of fuel per second cancels out gravity.
+*   **Real-Time Flight Data:** The game displays crucial information such as altitude, speed, remaining fuel, and predicted impact time.
+*   **Crash or Land:** Depending on the landing speed, the player either successfully lands or crashes.
+*   **Game Restart:** An option to play again after a successful landing or a crash.
+*   **Fuel Warning:** The game warns the player if they run out of fuel.
 
----
+## Technology Stack
 
-## Getting Started
-To get the game up and running, all you have to do is save the code to a file and run it directly from your terminal.
+*   **Python:** The game is written entirely in Python.
 
-1.  Save the code provided in `lunar_lander.py`.
-2.  Open your terminal or command prompt.
-3.  Navigate to the directory where you saved the file.
+## Prerequisites
 
----
+*   **Python Interpreter:**  You need a Python interpreter (version 3.x is recommended) installed on your system. You can download it from [https://www.python.org/downloads/](https://www.python.org/downloads/).
 
-## How to Run the Application
-Once you've saved the file, you can start the game with a single command.
+## Installation Instructions
 
-```bash
-python lunar_lander.py
-```
+1.  **Clone the Repository:** Clone the repository to your local machine using Git:
 
----
-## Relevant Code Examples
+    ```bash
+    git clone https://github.com/JoozKelly/text-based-lunar-lander-python.git
+    cd text-based-lunar-lander-python
+    ```
 
-The core game logic is contained within the `lunar_lander()` function. Here's a look at the two key calculations that drive the simulation.
+## Usage Guide
 
-### Calculating New Flight Data
+1.  **Run the Game:**  Navigate to the project directory in your terminal and execute the `app.py` script:
 
-The `while` loop is the heart of the game, updating the module's state on each turn. The speed and altitude are adjusted based on gravity and your chosen burn rate.
+    ```bash
+    python app.py
+    ```
 
-```python
-# Calculating New Flight Data
-altitude -= speed # same as altitude = altitude - speed
-speed += gravity - burn/10
-fuel -= burn
-```
+2.  **Game Play:**
+    *   The game will display the current altitude, speed, remaining fuel, predicted impact time, and the previous burn rate.
+    *   Enter the amount of fuel to burn (an integer between 0 and 50) when prompted.
+    *   The game will update the flight data after each turn.
+    *   Try to land with a speed of 5 or less to avoid crashing.
+    *   Follow the on-screen prompts to play again or quit.
 
----
-### Checking the Landing Outcome
-After the module's altitude drops to zero, the game checks your final landing conditions. If your speed is too high, you crash; otherwise, you've landed safely.
+    **Important Notes:**
 
-```python
-# Display Good Landing or Not
-if altitude < -5 or speed > 5:
-    print("You have crashed...")
-else:
-    print("You have landed!")
-```
+    *   Minus velocity (-) means downward.
+    *   Plus velocity (+) means upward.
+    *   Maximum burn is 50 units/sec.
+    *   A burn of 5 units/sec is required to cancel gravity.
 
----
-### Conclusion
-This Lunar Lander game is a fantastic demonstration of a straightforward yet engaging command-line application. It's a great starting point for anyone interested in game development, physics simulations, or learning the fundamentals of Python. Have fun, and be sure to land softly! 🌕
+## Contributing Guidelines
 
-This video provides an excellent example of how to build a similar lunar lander game from scratch in Python.
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes and commit them with descriptive commit messages.
+4.  Push your changes to your fork.
+5.  Submit a pull request to the `main` branch of the original repository.
+
+## License Information
+
+This project does not currently have a license specified. All rights are reserved by the author.
+
+## Contact/Support Information
+
+For any questions, issues, or support requests, please contact [https://github.com/JoozKelly](https://github.com/JoozKelly) through GitHub.
