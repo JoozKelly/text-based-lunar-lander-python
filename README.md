@@ -59,7 +59,7 @@ else:
 ```
 
 ---
-###Conclusion
+### Conclusion
 This Lunar Lander game is a fantastic demonstration of a straightforward yet engaging command-line application. It's a great starting point for anyone interested in game development, physics simulations, or learning the fundamentals of Python. Have fun, and be sure to land softly! 🌕
 
 This video provides an excellent example of how to build a similar lunar lander game from scratch in Python.
